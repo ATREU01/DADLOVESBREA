@@ -22,19 +22,23 @@
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      /* TOTORO/GHIBLI PALETTE */
-      --forest-dark: #1a2f23;
-      --forest-mid: #2d4a3a;
-      --forest-light: #3d6b52;
-      --lantern-red: #c73e3a;
-      --lantern-orange: #e07830;
-      --lantern-gold: #f0c060;
-      --lantern-glow: #ffddaa;
-      --cream: #faf5eb;
-      --soft-white: #f8f4ec;
-      --totoro-gray: #7a8b8b;
-      --soot-sprite: #2a2a2a;
+      /* PASTEL ANIME PALETTE */
+      --forest-dark: #1a1a2e;
+      --forest-mid: #2d2d4a;
+      --forest-light: #4a4a6a;
+      --lantern-red: #ffb6c1;
+      --lantern-orange: #fffacd;
+      --lantern-gold: #b0e0e6;
+      --lantern-glow: #ffeef2;
+      --cream: #fff5f8;
+      --soft-white: #fefefe;
+      --totoro-gray: #b8b8d1;
+      --soot-sprite: #2a2a3a;
       --sakura-pink: #ffb7c5;
+      --pastel-pink: #ffb6c1;
+      --pastel-yellow: #fffacd;
+      --pastel-blue: #b0e0e6;
+      --pastel-lavender: #e6e6fa;
     }
 
     * {
@@ -88,20 +92,22 @@
       position: absolute;
       width: 100%;
       height: 100%;
-      background: radial-gradient(ellipse at 30% 30%, #ffd4dc 0%, #ffb7c5 30%, #ff9eb0 60%, transparent 70%);
+      background: radial-gradient(ellipse at 30% 30%, #ffe4ec 0%, #ffb6c1 30%, #ffa0b0 60%, transparent 70%);
       border-radius: 50% 0 50% 50%;
       transform: rotate(45deg);
-      box-shadow: 0 0 4px rgba(255, 183, 197, 0.5);
+      box-shadow: 0 0 6px rgba(255, 182, 193, 0.6);
     }
 
     .cherry-blossom:nth-child(even)::before {
-      background: radial-gradient(ellipse at 30% 30%, #ffe4e8 0%, #ffc8d0 30%, #ffadb8 60%, transparent 70%);
+      background: radial-gradient(ellipse at 30% 30%, #fff5d0 0%, #fffacd 30%, #ffe680 60%, transparent 70%);
       border-radius: 50% 50% 0 50%;
+      box-shadow: 0 0 6px rgba(255, 250, 205, 0.6);
     }
 
     .cherry-blossom:nth-child(3n)::before {
-      background: radial-gradient(ellipse at 30% 30%, #ffeef0 0%, #ffd0d8 30%, #ffb8c4 60%, transparent 70%);
+      background: radial-gradient(ellipse at 30% 30%, #e0f5f8 0%, #b0e0e6 30%, #80c8d2 60%, transparent 70%);
       border-radius: 0 50% 50% 50%;
+      box-shadow: 0 0 6px rgba(176, 224, 230, 0.6);
     }
 
     @keyframes fall-snow {
@@ -232,61 +238,61 @@
       overflow: hidden;
     }
 
-    /* RED LANTERN */
+    /* PASTEL PINK LANTERN */
     .string-lantern:nth-child(3n+1) .lantern-body {
-      background: 
+      background:
         repeating-linear-gradient(
           0deg,
-          #e63e3e 0px,
-          #d63030 3px,
-          #c52525 4px,
-          #b81c1c 6px,
-          #d63030 7px,
-          #e63e3e 10px
+          #ffb6c1 0px,
+          #ffa0b0 3px,
+          #ff8fa0 4px,
+          #ff7f90 6px,
+          #ffa0b0 7px,
+          #ffb6c1 10px
         );
-      box-shadow: 
-        0 0 25px 8px rgba(255, 100, 80, 0.5),
-        0 0 50px 15px rgba(255, 80, 60, 0.3),
-        0 0 80px 25px rgba(255, 60, 40, 0.15),
-        inset 0 0 20px rgba(255, 200, 150, 0.3);
+      box-shadow:
+        0 0 25px 8px rgba(255, 182, 193, 0.5),
+        0 0 50px 15px rgba(255, 182, 193, 0.3),
+        0 0 80px 25px rgba(255, 182, 193, 0.15),
+        inset 0 0 20px rgba(255, 240, 245, 0.3);
     }
 
-    /* ORANGE LANTERN */
+    /* PASTEL YELLOW LANTERN */
     .string-lantern:nth-child(3n+2) .lantern-body {
-      background: 
+      background:
         repeating-linear-gradient(
           0deg,
-          #f5a030 0px,
-          #e89020 3px,
-          #db8018 4px,
-          #cc7010 6px,
-          #e89020 7px,
-          #f5a030 10px
+          #fffacd 0px,
+          #fff0a0 3px,
+          #ffe680 4px,
+          #ffdc70 6px,
+          #fff0a0 7px,
+          #fffacd 10px
         );
-      box-shadow: 
-        0 0 25px 8px rgba(255, 180, 80, 0.5),
-        0 0 50px 15px rgba(255, 160, 60, 0.3),
-        0 0 80px 25px rgba(255, 140, 40, 0.15),
-        inset 0 0 20px rgba(255, 220, 150, 0.3);
+      box-shadow:
+        0 0 25px 8px rgba(255, 250, 205, 0.5),
+        0 0 50px 15px rgba(255, 250, 205, 0.3),
+        0 0 80px 25px rgba(255, 250, 205, 0.15),
+        inset 0 0 20px rgba(255, 255, 240, 0.3);
     }
 
-    /* GOLD LANTERN */
+    /* PASTEL BLUE LANTERN */
     .string-lantern:nth-child(3n) .lantern-body {
-      background: 
+      background:
         repeating-linear-gradient(
           0deg,
-          #f0d048 0px,
-          #e5c038 3px,
-          #d9b028 4px,
-          #cca020 6px,
-          #e5c038 7px,
-          #f0d048 10px
+          #b0e0e6 0px,
+          #98d4dc 3px,
+          #80c8d2 4px,
+          #70bcc8 6px,
+          #98d4dc 7px,
+          #b0e0e6 10px
         );
-      box-shadow: 
-        0 0 25px 8px rgba(255, 220, 100, 0.5),
-        0 0 50px 15px rgba(255, 210, 80, 0.3),
-        0 0 80px 25px rgba(255, 200, 60, 0.15),
-        inset 0 0 20px rgba(255, 240, 180, 0.3);
+      box-shadow:
+        0 0 25px 8px rgba(176, 224, 230, 0.5),
+        0 0 50px 15px rgba(176, 224, 230, 0.3),
+        0 0 80px 25px rgba(176, 224, 230, 0.15),
+        inset 0 0 20px rgba(230, 250, 255, 0.3);
     }
 
     /* Inner glow highlight */
@@ -494,20 +500,20 @@
     .unlock-btn {
       position: relative;
       padding: 1.2rem 3rem;
-      background: linear-gradient(135deg, var(--lantern-red) 0%, #a02020 50%, var(--lantern-red) 100%);
+      background: linear-gradient(135deg, #ffb6c1 0%, #ff8fa0 50%, #ffb6c1 100%);
       background-size: 200% 200%;
       border: none;
       border-radius: 50px;
       font-family: 'Nunito', sans-serif;
       font-size: 1.15rem;
       font-weight: 700;
-      color: var(--cream);
+      color: #1a1a2e;
       cursor: pointer;
       transition: all 0.4s ease;
       animation: btn-glow 3s ease-in-out infinite;
-      box-shadow: 
-        0 0 30px rgba(199, 62, 58, 0.5),
-        0 0 60px rgba(224, 120, 48, 0.3);
+      box-shadow:
+        0 0 30px rgba(255, 182, 193, 0.5),
+        0 0 60px rgba(176, 224, 230, 0.3);
       overflow: hidden;
     }
 
@@ -516,8 +522,8 @@
       position: absolute;
       inset: -3px;
       border-radius: 53px;
-      background: linear-gradient(90deg, var(--lantern-gold), var(--lantern-orange), var(--lantern-gold));
-      background-size: 200% 100%;
+      background: linear-gradient(90deg, #b0e0e6, #fffacd, #ffb6c1, #b0e0e6);
+      background-size: 300% 100%;
       animation: border-sweep 3s linear infinite;
       z-index: -1;
     }
@@ -527,13 +533,13 @@
       position: absolute;
       inset: 3px;
       border-radius: 47px;
-      background: linear-gradient(135deg, var(--lantern-red) 0%, #a02020 100%);
+      background: linear-gradient(135deg, #ffb6c1 0%, #ffa0b0 100%);
       z-index: -1;
     }
 
     @keyframes btn-glow {
-      0%, 100% { box-shadow: 0 0 30px rgba(199, 62, 58, 0.5), 0 0 60px rgba(224, 120, 48, 0.3); }
-      50% { box-shadow: 0 0 40px rgba(199, 62, 58, 0.7), 0 0 80px rgba(224, 120, 48, 0.5); }
+      0%, 100% { box-shadow: 0 0 30px rgba(255, 182, 193, 0.5), 0 0 60px rgba(176, 224, 230, 0.3); }
+      50% { box-shadow: 0 0 40px rgba(255, 182, 193, 0.7), 0 0 80px rgba(176, 224, 230, 0.5); }
     }
 
     @keyframes border-sweep {
@@ -643,61 +649,61 @@
       overflow: hidden;
     }
 
-    /* RED */
+    /* PASTEL PINK */
     .divider-lantern:nth-child(3n+1) .lantern-body {
-      background: 
+      background:
         repeating-linear-gradient(
           0deg,
-          #e63e3e 0px,
-          #d63030 2px,
-          #c52525 3px,
-          #b81c1c 5px,
-          #d63030 6px,
-          #e63e3e 8px
+          #ffb6c1 0px,
+          #ffa0b0 2px,
+          #ff8fa0 3px,
+          #ff7f90 5px,
+          #ffa0b0 6px,
+          #ffb6c1 8px
         );
-      box-shadow: 
-        0 0 20px 6px rgba(255, 100, 80, 0.45),
-        0 0 40px 12px rgba(255, 80, 60, 0.25),
-        0 0 60px 20px rgba(255, 60, 40, 0.12),
-        inset 0 0 15px rgba(255, 200, 150, 0.25);
+      box-shadow:
+        0 0 20px 6px rgba(255, 182, 193, 0.45),
+        0 0 40px 12px rgba(255, 182, 193, 0.25),
+        0 0 60px 20px rgba(255, 182, 193, 0.12),
+        inset 0 0 15px rgba(255, 240, 245, 0.25);
     }
 
-    /* ORANGE */
+    /* PASTEL YELLOW */
     .divider-lantern:nth-child(3n+2) .lantern-body {
-      background: 
+      background:
         repeating-linear-gradient(
           0deg,
-          #f5a030 0px,
-          #e89020 2px,
-          #db8018 3px,
-          #cc7010 5px,
-          #e89020 6px,
-          #f5a030 8px
+          #fffacd 0px,
+          #fff0a0 2px,
+          #ffe680 3px,
+          #ffdc70 5px,
+          #fff0a0 6px,
+          #fffacd 8px
         );
-      box-shadow: 
-        0 0 20px 6px rgba(255, 180, 80, 0.45),
-        0 0 40px 12px rgba(255, 160, 60, 0.25),
-        0 0 60px 20px rgba(255, 140, 40, 0.12),
-        inset 0 0 15px rgba(255, 220, 150, 0.25);
+      box-shadow:
+        0 0 20px 6px rgba(255, 250, 205, 0.45),
+        0 0 40px 12px rgba(255, 250, 205, 0.25),
+        0 0 60px 20px rgba(255, 250, 205, 0.12),
+        inset 0 0 15px rgba(255, 255, 240, 0.25);
     }
 
-    /* GOLD */
+    /* PASTEL BLUE */
     .divider-lantern:nth-child(3n) .lantern-body {
-      background: 
+      background:
         repeating-linear-gradient(
           0deg,
-          #f0d048 0px,
-          #e5c038 2px,
-          #d9b028 3px,
-          #cca020 5px,
-          #e5c038 6px,
-          #f0d048 8px
+          #b0e0e6 0px,
+          #98d4dc 2px,
+          #80c8d2 3px,
+          #70bcc8 5px,
+          #98d4dc 6px,
+          #b0e0e6 8px
         );
-      box-shadow: 
-        0 0 20px 6px rgba(255, 220, 100, 0.45),
-        0 0 40px 12px rgba(255, 210, 80, 0.25),
-        0 0 60px 20px rgba(255, 200, 60, 0.12),
-        inset 0 0 15px rgba(255, 240, 180, 0.25);
+      box-shadow:
+        0 0 20px 6px rgba(176, 224, 230, 0.45),
+        0 0 40px 12px rgba(176, 224, 230, 0.25),
+        0 0 60px 20px rgba(176, 224, 230, 0.12),
+        inset 0 0 15px rgba(230, 250, 255, 0.25);
     }
 
     .divider-lantern .lantern-body::after {
@@ -750,14 +756,14 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: clamp(3rem, 12vw, 7rem);
       font-weight: 600;
-      background: linear-gradient(135deg, var(--lantern-red) 0%, var(--lantern-orange) 40%, var(--lantern-gold) 70%, var(--lantern-glow) 100%);
+      background: linear-gradient(135deg, #ffb6c1 0%, #fffacd 40%, #b0e0e6 70%, #ffeef2 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
       margin-bottom: 1rem;
       animation: fadeInUp 1s ease forwards;
       opacity: 0;
-      filter: drop-shadow(0 0 30px rgba(240, 192, 96, 0.4));
+      filter: drop-shadow(0 0 30px rgba(255, 182, 193, 0.4));
     }
 
     @keyframes fadeInUp {
@@ -1073,7 +1079,7 @@
       font-family: 'Cormorant Garamond', serif;
       font-size: 2.5rem;
       font-weight: 700;
-      background: linear-gradient(135deg, var(--lantern-red), var(--lantern-gold));
+      background: linear-gradient(135deg, #ffb6c1, #b0e0e6);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -1098,11 +1104,11 @@
 
     .letter {
       max-width: 650px;
-      background: linear-gradient(135deg, #1a0808 0%, #2d1515 50%, #1a0808 100%);
+      background: linear-gradient(135deg, #1a1a2e 0%, #252542 50%, #1a1a2e 100%);
       color: var(--cream);
       padding: 0;
       border-radius: 16px;
-      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6), 0 0 0 4px var(--lantern-gold), 0 0 60px rgba(240, 192, 96, 0.2);
+      box-shadow: 0 25px 80px rgba(0, 0, 0, 0.6), 0 0 0 4px #ffb6c1, 0 0 60px rgba(255, 182, 193, 0.2);
       position: relative;
       overflow: hidden;
     }
@@ -1114,11 +1120,11 @@
       left: 0;
       right: 0;
       padding: 1rem;
-      background: linear-gradient(135deg, var(--lantern-red), #8b0000);
+      background: linear-gradient(135deg, #ffb6c1, #ff8fa0);
       text-align: center;
       font-size: 1.8rem;
-      color: var(--lantern-gold);
-      border-bottom: 2px solid var(--lantern-gold);
+      color: #1a1a2e;
+      border-bottom: 2px solid #b0e0e6;
     }
 
     .letter-inner {
@@ -1150,7 +1156,7 @@
     .letter-signature {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.8rem;
-      background: linear-gradient(135deg, var(--lantern-red), var(--lantern-orange));
+      background: linear-gradient(135deg, #ffb6c1, #fffacd);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -1187,7 +1193,7 @@
     .gift-box-body {
       width: 100%;
       height: 80%;
-      background: linear-gradient(135deg, var(--lantern-red), #8b0000);
+      background: linear-gradient(135deg, #ffb6c1, #ff8fa0);
       border-radius: 8px;
       position: absolute;
       bottom: 0;
@@ -1196,7 +1202,7 @@
     .gift-box-lid {
       width: 110%;
       height: 30%;
-      background: linear-gradient(135deg, #c73e3a, var(--lantern-red));
+      background: linear-gradient(135deg, #ffc0cb, #ffb6c1);
       border-radius: 8px;
       position: absolute;
       top: 15%;
@@ -1210,21 +1216,21 @@
     .gift-ribbon-v {
       width: 22px;
       height: 100%;
-      background: linear-gradient(90deg, var(--lantern-gold), var(--lantern-glow), var(--lantern-gold));
+      background: linear-gradient(90deg, #b0e0e6, #d4f0f5, #b0e0e6);
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      box-shadow: 0 0 20px rgba(240, 192, 96, 0.5);
+      box-shadow: 0 0 20px rgba(176, 224, 230, 0.5);
     }
 
     .gift-ribbon-h {
       width: 100%;
       height: 22px;
-      background: linear-gradient(180deg, var(--lantern-gold), var(--lantern-glow), var(--lantern-gold));
+      background: linear-gradient(180deg, #b0e0e6, #d4f0f5, #b0e0e6);
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      box-shadow: 0 0 20px rgba(240, 192, 96, 0.5);
+      box-shadow: 0 0 20px rgba(176, 224, 230, 0.5);
     }
 
     .gift-bow {
@@ -1243,10 +1249,10 @@
       position: absolute;
       width: 35px;
       height: 35px;
-      background: linear-gradient(135deg, var(--lantern-gold), var(--lantern-glow));
+      background: linear-gradient(135deg, #fffacd, #fff5b0);
       border-radius: 50% 50% 50% 0;
       top: 0;
-      box-shadow: 0 0 20px rgba(240, 192, 96, 0.6);
+      box-shadow: 0 0 20px rgba(255, 250, 205, 0.6);
     }
 
     .gift-bow::before { left: 0; transform: rotate(-45deg); }
@@ -1299,14 +1305,14 @@
       padding: 3rem 2rem;
       padding-top: 5rem;
       text-align: center;
-      background: linear-gradient(180deg, var(--forest-dark) 0%, #050a07 100%);
+      background: linear-gradient(180deg, var(--forest-dark) 0%, #0f0f1a 100%);
       position: relative;
     }
 
     footer p {
       font-family: 'Cormorant Garamond', serif;
       font-size: 1.6rem;
-      background: linear-gradient(135deg, var(--lantern-red), var(--lantern-gold), var(--lantern-orange));
+      background: linear-gradient(135deg, #ffb6c1, #fffacd, #b0e0e6);
       background-size: 200% 200%;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1331,15 +1337,15 @@
     .footer-lantern {
       width: 18px;
       height: 24px;
-      background: linear-gradient(180deg, var(--lantern-red) 0%, #8b0000 100%);
+      background: linear-gradient(180deg, #ffb6c1 0%, #ff8fa0 100%);
       border-radius: 50% 50% 45% 45%;
-      box-shadow: 0 0 10px var(--lantern-orange);
+      box-shadow: 0 0 10px rgba(255, 182, 193, 0.6);
       animation: footer-sway 2s ease-in-out infinite;
     }
 
-    .footer-lantern:nth-child(2) { background: linear-gradient(180deg, var(--lantern-gold) 0%, #c9a030 100%); animation-delay: 0.3s; }
-    .footer-lantern:nth-child(3) { background: linear-gradient(180deg, var(--lantern-orange) 0%, #b85c20 100%); animation-delay: 0.6s; }
-    .footer-lantern:nth-child(4) { background: linear-gradient(180deg, var(--lantern-gold) 0%, #c9a030 100%); animation-delay: 0.9s; }
+    .footer-lantern:nth-child(2) { background: linear-gradient(180deg, #fffacd 0%, #ffe680 100%); box-shadow: 0 0 10px rgba(255, 250, 205, 0.6); animation-delay: 0.3s; }
+    .footer-lantern:nth-child(3) { background: linear-gradient(180deg, #b0e0e6 0%, #80c8d2 100%); box-shadow: 0 0 10px rgba(176, 224, 230, 0.6); animation-delay: 0.6s; }
+    .footer-lantern:nth-child(4) { background: linear-gradient(180deg, #fffacd 0%, #ffe680 100%); box-shadow: 0 0 10px rgba(255, 250, 205, 0.6); animation-delay: 0.9s; }
     .footer-lantern:nth-child(5) { animation-delay: 1.2s; }
 
     @keyframes footer-sway {
